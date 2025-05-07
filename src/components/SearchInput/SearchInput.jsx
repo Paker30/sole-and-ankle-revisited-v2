@@ -6,9 +6,9 @@ import { COLORS } from '../../constants';
 import VisuallyHidden from '../VisuallyHidden';
 import Icon from '../Icon';
 
-const SearchInput = ({ label, ...delegated }) => {
+const SearchInput = ({ label, className, ...delegated }) => {
   return (
-    <Label>
+    <Label className={className}>
       <VisuallyHidden>Search</VisuallyHidden>
       <Input {...delegated} placeholder="Search…" />
       <SearchIcon id="search" strokeWidth={1} size={16} />

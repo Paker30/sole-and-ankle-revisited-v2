@@ -7,6 +7,8 @@ import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 
+const StyledSearchInput = styled(SearchInput)``;
+
 const SuperHeader = () => {
   return (
     <Container>
@@ -14,7 +16,7 @@ const SuperHeader = () => {
         <MarketingMessage>
           Free shipping on domestic orders over $75!
         </MarketingMessage>
-        <SearchInput />
+        <StyledSearchInput />
         <HelpLink href="/help">Help</HelpLink>
         <UnstyledButton>
           <Icon id="shopping-bag" strokeWidth={1} />
@@ -23,6 +25,8 @@ const SuperHeader = () => {
     </Container>
   );
 };
+
+
 
 const Container = styled.div`
   container-type: inline-size;
@@ -63,6 +67,9 @@ const Wrapper = styled.div`
       display: none;
     }
     ${UnstyledButton} {
+      display: none;
+    }
+    ${StyledSearchInput} {
       display: none;
     }
   }
